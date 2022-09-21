@@ -10,14 +10,31 @@ const subTxt = document.getElementById("subTxt");
 
 
  let symbols = [" ! "," @ "," # "," $ "," % "," ^ "," & "," * "," + "];
+
+ let range = [];
+
+//  function createP() {
+//    para = document.createElement('p');
+//     document.getElementById('mainTxt').appendChild(para);
+//     para.textContent = range[0];
+// }
+
  function  numbers() {
-        let range = [];
+        
         for (i = 1; i <= 99; i++) {
-            range.push(i);
-        }   return range;
+            para = document.createElement('p');
+            document.getElementById('mainTxt').appendChild(para);
+            para.textContent = i;
+        } 
     } 
     
+    // function lineUp(Array) {
+    //     for (i = 1; i <= Array.length; i++) {
+    //         let cardtext = document.createElement('p');
+    //         document.appendChild
+    //     }
 
+    // }
 
 
 function update() {
