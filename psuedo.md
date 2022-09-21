@@ -59,3 +59,20 @@ resetBtn = button to reset game, on pages 2 - 6
 
 revealBtn = button to reveal the answer on page5
 
+symbols = [symbol1, symbol2, symbol4, symbol5, symbol6, symbol7, symbol8, symbol9] (Each symbol will be an image or icon, so the array may need to be an object, or the symbols themselves may need to be objects.)
+
+numbers = [0-99]
+
+
+
+
+### Functionality
+
+init() {
+    display(pages[0]);
+    resetBtn.style = hidden; - <button class="btn" id="subBtn"></button>
+    
+
+
+}
+
