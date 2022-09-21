@@ -9,6 +9,17 @@ const subTxt = document.getElementById("subTxt");
 
 
 
+ let symbols = [" ! "," @ "," # "," $ "," % "," ^ "," & "," * "," + "];
+ function  numbers() {
+        let range = [];
+        for (i = 1; i <= 99; i++) {
+            range.push(i);
+        }   return range;
+    } 
+    
+
+
+
 function update() {
     index++;
     display();
@@ -19,6 +30,14 @@ function display() {
     mainBtn.textContent = pages[index].mainBtn;
     subBtn.textContent = pages[index].subBtn;
     subTxt.textContent = pages[index].subTxt;
+    if (index === 4) {
+        mainTxt.textContent = symbols;
+    }
+}
+
+function reset() {
+    index = 0;
+    display();
 }
 
 let getTxt = document.getElementsByClassName('pageTxt').textContent;
@@ -26,4 +45,8 @@ let getTxt = document.getElementsByClassName('pageTxt').textContent;
 display();
 
 nxtBtn.addEventListener('click', update);
+
+subBtn.addEventListener('click', reset);
+
+
 

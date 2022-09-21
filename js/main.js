@@ -28,12 +28,19 @@ let pages = [
     },
 
     {
-    headTxt: null,
-    subTxt: "Find your new number.Note the symbol beside the number",
+    headTxt: null
+    // {symbols: ["!","@","#","$","%","^","&","*","+"],
+    // numbers: function() {
+    //     let range = [];
+    //     for (i = 1; i <= 99; i++) {
+    //         range.push(i);
+    //     }   return range;
+    // } 
+    // }
+    ,
+    subTxt: "Find your new number. Note the symbol beside the number",
     mainBtn: "Reveal",
     subBtn: "Reset",
-    symbols:[],
-    numbers:[]
     },
 
     {
@@ -43,3 +50,12 @@ let pages = [
     subBtn: "Reset"
     } 
 ]
+
+// function range() { 
+//     for (i = 1; i <= 99; i++) {
+//     // return i;
+//     pages[4].headtxt.numbers.push(i);
+//     return pages[4].headTxt.numbers;
+// }
+
+// }
