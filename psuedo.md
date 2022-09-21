@@ -16,37 +16,51 @@ There will be an answer symbol that will be assigned to 0 and all integers that 
 
 Each page (6 total) will be an object, and the object pages will be stored in an array.
 
-page1 = {
-    headText: "I can read your mind",
-    subText: null,
+page = {
+    headTxt: "I can read your mind",
+    subTxt: null,
+    mainBtn: "Go",
+    subBtn: null
 };
 
-page2 = {
-    headText: "Pick a number from 01-99",
-    subText: "when you have your number click next"
+page = {
+    headTxt: "Pick a number from 01-99",
+    subTxt: "when you have your number click next"
+    mainBtn: "Next",
+    subBtn: "Reset"
 };
 
-page3 = {
-    headText: "Add both digits together to get a new number",
-    subText: "Ex: 14 is 1 + 4 = 5 
+page = {
+    headTxt: "Add both digits together to get a new number",
+    subTxt: "Ex: 14 is 1 + 4 = 5 
             click next to proceed"
+    mainBtn: "Next",
+    subBtn: "Reset"
 };
 
-page4 = {
-    headText: "Subtract your new number from the original number"
-    subText: "Ex: 14 - 5 = 9
+page = {
+    headTxt: "Subtract your new number from the original number"
+    subTxt: "Ex: 14 - 5 = 9
             click next to proceed"
+    mainBtn: "Next",
+    subBtn: "Reset"
 };
 
-page5 = {
-    headText: list number array matched up to symbol array
-    subText: "Find your new number."
+page = {
+    headTxt: list number array matched up to symbol array
+    subTxt: "Find your new number."
             Note the symbol beside the number"
+    mainBtn: "Reveal",
+    subBtn: "Reset",
+    symbols:[],
+    numbers:[]
 };
 
-page6 = {
-    headText: Answer Symbol
-    subText: "Your symbol is: Answer Symbol"
+page = {
+    headTxt: Answer Symbol
+    subTxt: "Your symbol is: Answer Symbol"
+    mainBtn: null,
+    subBtn: "Reset"
 };
 
 pages = [page1, page2, page3, page4, page5, page6];
@@ -68,11 +82,16 @@ numbers = [0-99]
 
 ### Functionality
 
-init() {
-    display(pages[0]);
-    resetBtn.style = hidden; - <button class="btn" id="subBtn"></button>
-    
-
-
+ function display(array.index) {
+    document.getElementById("mainTxt").textContent = page.headTxt;
 }
+
+function init() {
+    display(pages[0]);
+    subBtn.style = hidden; - <button class="btn" id="subBtn"></button>
+    mainBtn.style = visible;
+    console.log(???)
+}
+
+
 
