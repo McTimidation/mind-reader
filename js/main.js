@@ -3,7 +3,7 @@ const nxtBtn = document.getElementById('mainBtn');
 let index = 0;
 
 
-const mainTxt = document.getElementById("mainTxt");
+let mainTxt = document.getElementById("mainTxt");
 const mainBtn = document.getElementById("mainBtn");
 const subBtn = document.getElementById("subBtn"); 
 const subTxt = document.getElementById("subTxt"); 
@@ -59,11 +59,19 @@ let pages = [
 function  numbers() {
         
     let sym = 0;
+    numList = document.createElement('ul');
+    numList.className += "list-group col";
+    mainTxt.appendChild(numList);
+
+    symList = document.createElement('ul');
+    symList.className += "list-group col";
+    mainTxt.appendChild(symList);
+
         for (i = 0; i <= 99; i++) {
-            list = document.createElement('li');
-            list.className = "list-group-item";
-            document.getElementById('numList').appendChild(list);
-            list.textContent = i + symbols[sym];
+            listItem = document.createElement('li');
+            listItem.className = "numberList list-group-item";
+            numList.appendChild(listItem);
+            listItem.innerText = i + symbols[sym];
             sym++;
             if (sym === 9) {
                 sym = 0;
