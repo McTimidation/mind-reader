@@ -8,9 +8,9 @@ const mainBtn = document.getElementById("mainBtn");
 const subBtn = document.getElementById("subBtn"); 
 const subTxt = document.getElementById("subTxt"); 
 
-// let symbols = ["images/gDitsch.JPG","images/jBenson.JPG","images/Jhall.JPG","images/jMorford.JPG","images/jStewart.JPG","images/kDowning.JPG","images/nSuch.JPG","images/sRuh.JPG","images/unicorn.JPG"];
+let symbols = ["images/gDitsch.JPG","images/jBenson.JPG","images/Jhall.JPG","images/jMorford.JPG","images/jStewart.JPG","images/kDowning.JPG","images/nSuch.JPG","images/sRuh.JPG","images/unicorn.JPG"];
 
-let symbols = [" ! "," @ "," # "," $ "," % "," ^ "," & "," * "," + "];
+// let symbols = [" ! "," @ "," # "," $ "," % "," ^ "," & "," * "," + "];
 
 let pages = [
     {
@@ -60,18 +60,28 @@ function  numbers() {
         
     let sym = 0;
     numList = document.createElement('ul');
-    numList.className += "list-group col";
+    numList.className = "list-group col";
     mainTxt.appendChild(numList);
 
     symList = document.createElement('ul');
-    symList.className += "list-group col";
+    symList.className = "list-group col";
     mainTxt.appendChild(symList);
 
         for (i = 0; i <= 99; i++) {
             listItem = document.createElement('li');
             listItem.className = "numberList list-group-item";
             numList.appendChild(listItem);
-            listItem.innerText = i + symbols[sym];
+            listItem.textContent = i;
+
+            symbolItem = document.createElement('li');
+            symbolItem.className = "symbolList list-group-item";
+            symList.appendChild(symbolItem);
+
+            let img = document.createElement('img');
+            symbolItem.appendChild(img);
+            img.src = symbols[sym];
+            img.width = "25";
+            // symbolItem.textContent = symbols[sym];
             sym++;
             if (sym === 9) {
                 sym = 0;
