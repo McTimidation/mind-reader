@@ -8,7 +8,7 @@ const mainBtn = document.getElementById("mainBtn");
 const subBtn = document.getElementById("subBtn"); 
 const subTxt = document.getElementById("subTxt"); 
 
-let symbols = [" ! "," @ "," # "," $ "," % "," ^ "," & "," * "," + "];
+// let symbols = ["images/gDitsch.jpeg","images/jBenson.jpeg","images/Jhall.jpeg","images/jMorford.jpeg","images/jStewart.jpeg","images/kDowning.jpeg","images/nSuch.jpeg","images/sRuh.jpeg","images/unicorn.jpeg"];
 
 let pages = [
     {
@@ -56,11 +56,11 @@ let pages = [
 
 function  numbers() {
         
-    let sym = 0;
+    // let sym = 0;
         for (i = 0; i <= 99; i++) {
             para = document.createElement('p');
             document.getElementById('mainTxt').appendChild(para);
-            para.textContent = i + symbols[sym];
+            mainTxt.textContent = i; //+" "+ symbols[sym];
             sym++;
             if (sym === 9) {
                 sym = 0;

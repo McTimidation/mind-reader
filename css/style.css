@@ -7,9 +7,23 @@ body, .container-fluid {
     height:50%
 }
 
-#mainTxt {
+.card-header {
+    width: 375px;
+}
+
+#mainTxt, #numberCol, #symbolCol {
     height:215px;
 }
+
+#mainTxt {
+    padding: 0px;
+}
+
+p {
+    padding-left: 0px;
+}
+
+
 
 
 
