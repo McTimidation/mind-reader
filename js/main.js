@@ -8,7 +8,9 @@ const mainBtn = document.getElementById("mainBtn");
 const subBtn = document.getElementById("subBtn"); 
 const subTxt = document.getElementById("subTxt"); 
 
-// let symbols = ["images/gDitsch.jpeg","images/jBenson.jpeg","images/Jhall.jpeg","images/jMorford.jpeg","images/jStewart.jpeg","images/kDowning.jpeg","images/nSuch.jpeg","images/sRuh.jpeg","images/unicorn.jpeg"];
+// let symbols = ["images/gDitsch.JPG","images/jBenson.JPG","images/Jhall.JPG","images/jMorford.JPG","images/jStewart.JPG","images/kDowning.JPG","images/nSuch.JPG","images/sRuh.JPG","images/unicorn.JPG"];
+
+let symbols = [" ! "," @ "," # "," $ "," % "," ^ "," & "," * "," + "];
 
 let pages = [
     {
@@ -56,11 +58,12 @@ let pages = [
 
 function  numbers() {
         
-    // let sym = 0;
+    let sym = 0;
         for (i = 0; i <= 99; i++) {
-            para = document.createElement('p');
-            document.getElementById('mainTxt').appendChild(para);
-            mainTxt.textContent = i; //+" "+ symbols[sym];
+            list = document.createElement('li');
+            list.className = "list-group-item";
+            document.getElementById('numList').appendChild(list);
+            list.textContent = i + symbols[sym];
             sym++;
             if (sym === 9) {
                 sym = 0;

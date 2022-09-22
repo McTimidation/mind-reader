@@ -4,14 +4,13 @@ body, .container-fluid {
 
 .card {
     width: 375px;
-    height:50%
 }
 
 .card-header {
     width: 375px;
 }
 
-#mainTxt, #numberCol, #symbolCol {
+#mainTxt {
     height:215px;
 }
 
