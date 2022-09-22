@@ -1,9 +1,9 @@
 let pages = [
     {
     headTxt: "I can read your mind",
-    subTxt: null,
+    subTxt: '',
     mainBtn: "Go",
-    subBtn: null
+    subBtn: ''
     },
 
     {
@@ -28,7 +28,7 @@ let pages = [
     },
 
     {
-    headTxt: null
+    headTxt: '',
     // {symbols: ["!","@","#","$","%","^","&","*","+"],
     // numbers: function() {
     //     let range = [];
@@ -37,16 +37,16 @@ let pages = [
     //     }   return range;
     // } 
     // }
-    ,
+    
     subTxt: "Find your new number. Note the symbol beside the number",
     mainBtn: "Reveal",
     subBtn: "Reset",
     },
 
     {
-    headTxt: null,
-    subTxt: "Your symbol is: Answer Symbol",
-    mainBtn: null,
+    headTxt: '',
+    subTxt: "Your symbol is: ",
+    mainBtn: '',
     subBtn: "Reset"
     } 
 ]
