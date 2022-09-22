@@ -21,7 +21,7 @@ function display() {
     subTxt.textContent = pages[index].subTxt;
 }
 
-let getTxt = document.getElementsByClassName('pageTxt').textContent;
+// let getTxt = document.getElementsByClassName('pageTxt').textContent;
 
 display();
 
