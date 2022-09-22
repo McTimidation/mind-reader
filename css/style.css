@@ -1,0 +1,8 @@
+body, .container-fluid {
+    height:100vh;
+}
+
+.card {
+    width: 375px;
+    height:50%
+}
