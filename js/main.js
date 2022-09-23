@@ -80,7 +80,7 @@ function  numbers() {
             let img = document.createElement('img');
             symbolItem.appendChild(img);
             img.src = symbols[sym];
-            img.width = "25";
+            img.width = "30";
             // symbolItem.textContent = symbols[sym];
             sym++;
             if (sym === 9) {
@@ -89,7 +89,7 @@ function  numbers() {
         } 
     }
 
-let answer = symbols[0];   
+// let answer = symbols[sym];   
 
 function display() {
     mainTxt.textContent = pages[index].headTxt;
@@ -99,8 +99,11 @@ function display() {
     if (index === 4) {
         numbers();
     } else if (index === 5) {
-        mainTxt.textContent = answer;
-        subTxt.textContent += answer;
+        let img = document.createElement('img');
+        mainTxt.appendChild(img);
+        img.src = symbols[0];
+        img.width = "100"
+        subTxt.textContent += "wow";
     } 
     let state = index;
     console.log('page' + ++state);

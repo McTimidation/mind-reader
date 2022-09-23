@@ -16,6 +16,7 @@ body, .container-fluid {
 
 #mainTxt {
     padding: 0px;
+    margin: 0px;
 }
 
 p {
@@ -29,6 +30,10 @@ li {
 
 .numberList, .symbolList {
     height: 50px;
+}
+
+ul {
+    padding: 0px;
 }
 
 
