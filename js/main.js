@@ -1,3 +1,17 @@
+const nxtBtn = document.getElementById('mainBtn');
+
+let index = 0;
+
+
+let mainTxt = document.getElementById("mainTxt");
+const mainBtn = document.getElementById("mainBtn");
+const subBtn = document.getElementById("subBtn"); 
+const subTxt = document.getElementById("subTxt"); 
+
+let symbols = ["images/gDitsch.JPG","images/jBenson.JPG","images/Jhall.JPG","images/jMorford.JPG","images/jStewart.JPG","images/kDowning.JPG","images/nSuch.JPG","images/sRuh.JPG","images/unicorn.JPG"];
+
+// let symbols = [" ! "," @ "," # "," $ "," % "," ^ "," & "," * "," + "];
+
 let pages = [
     {
     headTxt: "I can read your mind",
@@ -29,15 +43,6 @@ let pages = [
 
     {
     headTxt: '',
-    // {symbols: ["!","@","#","$","%","^","&","*","+"],
-    // numbers: function() {
-    //     let range = [];
-    //     for (i = 1; i <= 99; i++) {
-    //         range.push(i);
-    //     }   return range;
-    // } 
-    // }
-    
     subTxt: "Find your new number. Note the symbol beside the number",
     mainBtn: "Reveal",
     subBtn: "Reset",
@@ -51,11 +56,71 @@ let pages = [
     } 
 ]
 
-// function range() { 
-//     for (i = 1; i <= 99; i++) {
-//     // return i;
-//     pages[4].headtxt.numbers.push(i);
-//     return pages[4].headTxt.numbers;
-// }
+function  numbers() {
+        
+    let sym = 0;
+    numList = document.createElement('ul');
+    numList.className = "list-group col";
+    mainTxt.appendChild(numList);
 
-// }
+    symList = document.createElement('ul');
+    symList.className = "list-group col";
+    mainTxt.appendChild(symList);
+
+        for (i = 0; i <= 99; i++) {
+            listItem = document.createElement('li');
+            listItem.className = "numberList list-group-item";
+            numList.appendChild(listItem);
+            listItem.textContent = i;
+
+            symbolItem = document.createElement('li');
+            symbolItem.className = "symbolList list-group-item";
+            symList.appendChild(symbolItem);
+
+            let img = document.createElement('img');
+            symbolItem.appendChild(img);
+            img.src = symbols[sym];
+            img.width = "30";
+            // symbolItem.textContent = symbols[sym];
+            sym++;
+            if (sym === 9) {
+                sym = 0;
+            }
+        } 
+    }
+
+// let answer = symbols[sym];   
+
+function display() {
+    mainTxt.textContent = pages[index].headTxt;
+    mainBtn.textContent = pages[index].mainBtn;
+    subBtn.textContent = pages[index].subBtn;
+    subTxt.textContent = pages[index].subTxt;
+    if (index === 4) {
+        numbers();
+    } else if (index === 5) {
+        let img = document.createElement('img');
+        mainTxt.appendChild(img);
+        img.src = symbols[0];
+        img.width = "100"
+        subTxt.textContent += "wow";
+    } 
+    let state = index;
+    console.log('page' + ++state);
+}
+
+function update() {
+    index++;
+    display();
+}
+
+function reset() {
+    index = 0;
+    display();
+}
+
+display();
+
+nxtBtn.addEventListener('click', update);
+
+subBtn.addEventListener('click', reset);
