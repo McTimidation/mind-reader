@@ -2,7 +2,6 @@ const nxtBtn = document.getElementById('mainBtn');
 
 let index = 0;
 
-
 let mainTxt = document.getElementById("mainTxt");
 const mainBtn = document.getElementById("mainBtn");
 const subBtn = document.getElementById("subBtn"); 
@@ -56,6 +55,8 @@ let pages = [
     } 
 ]
 
+subBtn.style.visibility = "hidden";
+
 function  numbers() {
         
     let sym = 0;
@@ -104,6 +105,7 @@ function display() {
         img.src = symbols[0];
         img.width = "100"
         subTxt.textContent += "wow";
+        mainBtn.style.visibility = "hidden";
     } 
     let state = index;
     console.log('page' + ++state);
@@ -112,11 +114,14 @@ function display() {
 function update() {
     index++;
     display();
+    subBtn.style.visibility = "visible";
 }
 
 function reset() {
     index = 0;
     display();
+    subBtn.style.visibility = "hidden";
+    mainBtn.style.visibility = "visible";
 }
 
 display();
