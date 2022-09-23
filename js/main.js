@@ -9,6 +9,20 @@ const subTxt = document.getElementById("subTxt");
 
 let symbols = ["images/gDitsch.JPG","images/jBenson.JPG","images/Jhall.JPG","images/jMorford.JPG","images/jStewart.JPG","images/kDowning.JPG","images/nSuch.JPG","images/sRuh.JPG","images/unicorn.JPG"];
 
+let symbolText = ["Gary!","Jacqueline!","Justin!", "Jonathon!", "Josh!", "Keith!", "Nick!", "Steven!", "Billi!"];
+// array1, array2, let current
+function shuffle(array) {
+    let currentIndex = array.length, randomIndex;
+
+    while (currentIndex != 0) {
+        randomIndex = Math.floor(Math.random() * currentIndex);
+        currentIndex--;
+        [array[currentIndex], array[randomIndex]] = [
+            array[randomIndex], array[currentIndex]];
+    }
+    return array;
+}
+
 // let symbols = [" ! "," @ "," # "," $ "," % "," ^ "," & "," * "," + "];
 
 let pages = [
@@ -104,7 +118,7 @@ function display() {
         mainTxt.appendChild(img);
         img.src = symbols[0];
         img.width = "100"
-        subTxt.textContent += "wow";
+        subTxt.textContent += "Look who it is!";
         mainBtn.style.visibility = "hidden";
     } 
     let state = index;
@@ -120,11 +134,14 @@ function update() {
 function reset() {
     index = 0;
     display();
+    shuffle(symbols);
     subBtn.style.visibility = "hidden";
     mainBtn.style.visibility = "visible";
 }
 
 display();
+
+shuffle(symbols);
 
 nxtBtn.addEventListener('click', update);
 
